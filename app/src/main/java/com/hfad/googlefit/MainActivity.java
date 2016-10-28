@@ -61,11 +61,8 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
     @Override
     public void onConnected(@Nullable Bundle bundle) {
-        // Connected to Google Fit Client.
-        // Connected to Google Fit Client.
         Fitness.SensorsApi.add(
                 mGoogleApiClient,
                 new SensorRequest.Builder()
@@ -111,6 +108,7 @@ public class MainActivity extends AppCompatActivity
                 public void run() {
                     Toast.makeText(getApplicationContext(), "Field: " + field.getName() + " Value: " + value, Toast.LENGTH_SHORT).show();
                     txtSteps = (TextView)findViewById(R.id.txtSteps);
+                    //TODO set text view as STEPS
                 }
             });
         }
